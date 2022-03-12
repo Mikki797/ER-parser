@@ -16,7 +16,7 @@ class PagesSpider(scrapy.Spider):
         if page[0] == '=':
           page = page[1]
 
-        filename = f'page_{page}.txt'
+        filename = f'/program_text/page_{page}.txt'
         with open(filename, 'w') as f:
             f.write(response.xpath("//div[@class='download__title']/text()").get() + '\n')
             
